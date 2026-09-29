@@ -23,4 +23,4 @@ targets:
   dev:
     default: true
     # workspace:
-    #   host: https://e2-demo-field-eng.cloud.databricks.com
+    #   host: https://<your-workspace-host>
