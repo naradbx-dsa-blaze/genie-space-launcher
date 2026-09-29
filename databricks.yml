@@ -15,7 +15,7 @@ resources:
         env:
           # Paste your Genie space URL here (or use GENIE_SPACE_ID instead).
           - name: GENIE_SPACE_URL
-            value: "https://e2-demo-field-eng.cloud.databricks.com/genie/rooms/01f1bc4256e91f0e83fa54c3edf57f25"
+            value: "https://<workspace-host>/genie/rooms/<space-id>"
           - name: APP_TITLE
             value: "Genie Space Launcher"
 

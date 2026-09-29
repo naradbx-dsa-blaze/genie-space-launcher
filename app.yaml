@@ -7,7 +7,7 @@ env:
   # ---- Configure your Genie space here ----
   # Easiest: paste the full space URL from your browser.
   - name: GENIE_SPACE_URL
-    value: "https://e2-demo-field-eng.cloud.databricks.com/genie/rooms/01f1bc4256e91f0e83fa54c3edf57f25"
+    value: "https://<workspace-host>/genie/rooms/<space-id>"
 
   # ---- OR ---- leave GENIE_SPACE_URL empty and set just the space id;
   # the app builds the URL from DATABRICKS_HOST (auto-injected) + this id.
