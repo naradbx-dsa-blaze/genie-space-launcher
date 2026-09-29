@@ -1,0 +1,18 @@
+# Runtime config for the Databricks Apps platform (used by UI-based deploy).
+command:
+  - python
+  - app.py
+
+env:
+  # ---- Configure your Genie space here ----
+  # Easiest: paste the full space URL from your browser.
+  - name: GENIE_SPACE_URL
+    value: "https://<workspace-host>/genie/rooms/<space-id>"
+
+  # ---- OR ---- leave GENIE_SPACE_URL empty and set just the space id;
+  # the app builds the URL from DATABRICKS_HOST (auto-injected) + this id.
+  # - name: GENIE_SPACE_ID
+  #   value: "<space-id>"
+
+  - name: APP_TITLE
+    value: "Genie Space Launcher"

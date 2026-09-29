@@ -1,0 +1,26 @@
+# Bundle config for deploying via the Databricks CLI (DABs).
+# Deploy with:  databricks bundle deploy -t dev --profile <PROFILE>
+# Start with:   databricks bundle run genie-space-launcher -t dev --profile <PROFILE>
+bundle:
+  name: genie-space-launcher
+
+resources:
+  apps:
+    genie-space-launcher:
+      name: genie-space-launcher
+      description: "Launch / embed a Genie space from a Databricks App"
+      source_code_path: .
+      config:
+        command: ["python", "app.py"]
+        env:
+          # Paste your Genie space URL here (or use GENIE_SPACE_ID instead).
+          - name: GENIE_SPACE_URL
+            value: "https://<workspace-host>/genie/rooms/<space-id>"
+          - name: APP_TITLE
+            value: "Genie Space Launcher"
+
+targets:
+  dev:
+    default: true
+    # workspace:
+    #   host: https://e2-demo-field-eng.cloud.databricks.com
